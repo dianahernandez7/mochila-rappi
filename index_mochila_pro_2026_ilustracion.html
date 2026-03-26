@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mochila PRO 2026 | SoyRappi</title>
+  <style>
+    :root {
+      --bg: #fff3ee;
+      --surface: rgba(255, 247, 242, 0.9);
+      --surface-strong: #fffaf7;
+      --ink: #3c120f;
+      --muted: #6d3f39;
+      --line: rgba(117, 28, 10, 0.14);
+      --brand: #ff5a36;
+      --brand-deep: #ff3b1f;
+      --brand-dark: #bf2100;
+      --sun: #ffd06a;
+      --mint: #d8ff7a;
+      --white: #ffffff;
+      --shadow: 0 22px 60px rgba(122, 23, 0, 0.18);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --topo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'%3E%3Cg fill='none' stroke='%23d53f1d' stroke-opacity='.34' stroke-width='2'%3E%3Cpath d='M-30 180c140-110 315-132 470-78s335 58 500-35 337-92 430-40'/%3E%3Cpath d='M-50 280c152-92 322-96 446-38 137 65 330 92 510 4 176-87 338-80 420-35'/%3E%3Cpath d='M-30 380c160-70 297-66 420-10 149 68 342 81 544-8 159-70 280-76 390-40'/%3E%3Cpath d='M-40 500c139-45 282-44 401 6 148 62 331 78 502 4 177-76 311-59 383-24'/%3E%3Cpath d='M-20 620c176-42 301-32 403 15 137 62 314 74 501-8 176-77 328-50 403-14'/%3E%3Cpath d='M-10 740c126-38 259-25 363 16 147 58 315 63 464 4 193-77 366-55 470-12'/%3E%3Cpath d='M220 -60c-40 109-20 210 57 303s95 198 57 308-24 198 27 301'/%3E%3Cpath d='M476 -80c-56 123-30 235 41 337s87 198 49 306-25 188 20 295'/%3E%3Cpath d='M730 -90c-55 126-35 244 29 338s84 187 50 286-22 177 18 278'/%3E%3Cpath d='M986 -80c-41 104-28 212 28 309s84 196 57 289-24 181 9 291'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.55), transparent 30%),
+        linear-gradient(180deg, #ff7b57 0%, #ff5b37 26%, #ffeedf 26%, #fff5ee 100%);
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      border: 6px solid rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      width: 460px;
+      height: 460px;
+      right: -120px;
+      top: 58px;
+      transform: rotate(12deg);
+    }
+
+    body::after {
+      width: 360px;
+      height: 360px;
+      left: -180px;
+      bottom: 110px;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 48px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(255, 114, 79, 0.95), rgba(255, 66, 31, 0.97)),
+        var(--topo);
+      background-size: cover, 1400px auto;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.11), transparent 24%),
+        radial-gradient(circle at 82% 24%, rgba(255, 205, 133, 0.2), transparent 20%);
+      pointer-events: none;
+    }
+
+    .brand-row,
+    .hero-grid,
+    .hero-foot {
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+      color: var(--white);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 0.9;
+      font-weight: 700;
+    }
+
+    .brand-tag {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(330px, 0.88fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      background: rgba(90, 12, 0, 0.18);
+      color: #fff6ed;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--mint);
+      box-shadow: 0 0 0 6px rgba(216, 255, 122, 0.16);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--white);
+      font-family: "Arial Black", "Avenir Next Condensed", sans-serif;
+      font-size: clamp(3rem, 7vw, 5.7rem);
+      line-height: 0.88;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      max-width: 8ch;
+    }
+
+    .hero-copy {
+      margin: 20px 0 0;
+      max-width: 61ch;
+      color: rgba(255, 249, 243, 0.96);
+      font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+      line-height: 1.55;
+    }
+
+    .hero-copy strong {
+      color: var(--sun);
+    }
+
+    .mission-card {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(93, 16, 2, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--white);
+      max-width: 560px;
+    }
+
+    .mission-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--sun);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mission-card p {
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .hero-art {
+      position: relative;
+      min-height: 480px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-bag-wrap {
+      width: min(440px, 100%);
+      display: grid;
+      place-items: center;
+      padding: 14px;
+    }
+
+    .hero-bag-image {
+      display: block;
+      width: min(420px, 100%);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 26px 34px rgba(60, 10, 0, 0.28));
+    }
+
+    .hero-foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 26px;
+      color: var(--white);
+    }
+
+    .hero-pill {
+      padding: 12px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(6px);
+      font-weight: 700;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin: 26px 0;
+    }
+
+    .stat-card,
+    .intro-card,
+    .care-menu,
+    .care-panel,
+    .mini-card,
+    .checklist {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 30px rgba(139, 54, 25, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .stat-card {
+      padding: 22px;
+      border-radius: var(--radius-lg);
+    }
+
+    .stat-label {
+      margin: 0 0 12px;
+      color: var(--brand-dark);
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      margin: 0;
+      font-family: "Arial Black", "Avenir Next Condensed", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .stat-copy {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.48;
+    }
+
+    .intro-grid,
+    .care-grid,
+    .footer-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .intro-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      margin-bottom: 22px;
+    }
+
+    .intro-card,
+    .mini-card,
+    .checklist,
+    .care-menu,
+    .care-panel {
+      border-radius: var(--radius-xl);
+    }
+
+    .intro-card {
+      padding: 28px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 90, 54, 0.1);
+      color: var(--brand-dark);
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Arial Black", "Avenir Next Condensed", sans-serif;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+    }
+
+    .section-copy {
+      margin: 16px 0 0;
+      color: var(--muted);
+      line-height: 1.62;
+      font-size: 1.03rem;
+    }
+
+    .highlight-line {
+      color: var(--brand-dark);
+      font-weight: 800;
+    }
+
+    .mini-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .mini-card {
+      padding: 22px;
+    }
+
+    .mini-card h3,
+    .care-panel h3,
+    .checklist h3 {
+      margin: 0 0 12px;
+      font-size: 1.16rem;
+    }
+
+    .mini-card p,
+    .care-panel p,
+    .checklist p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .safety-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(216, 255, 122, 0.34);
+      color: #344300;
+      font-weight: 800;
+    }
+
+    .care-grid {
+      grid-template-columns: minmax(300px, 0.95fr) minmax(0, 1.05fr);
+      margin-bottom: 22px;
+      align-items: start;
+    }
+
+    .care-menu {
+      padding: 24px;
+    }
+
+    .care-header {
+      margin-bottom: 18px;
+    }
+
+    .care-header p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.52;
+    }
+
+    .care-buttons {
+      display: grid;
+      gap: 12px;
+    }
+
+    .care-button {
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(149, 43, 10, 0.1);
+      background: rgba(255, 255, 255, 0.76);
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+
+    .care-button:hover,
+    .care-button:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(191, 33, 0, 0.24);
+      outline: none;
+      box-shadow: 0 14px 22px rgba(154, 33, 0, 0.12);
+    }
+
+    .care-button.is-active {
+      background: linear-gradient(135deg, rgba(255, 100, 72, 0.18), rgba(255, 223, 172, 0.3));
+      border-color: rgba(191, 33, 0, 0.28);
+    }
+
+    .care-button small {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--brand-dark);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .care-button strong {
+      display: block;
+      font-size: 1.04rem;
+    }
+
+    .care-button span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .care-panel {
+      padding: 28px;
+      min-height: 100%;
+    }
+
+    .panel-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 90, 54, 0.1);
+      color: var(--brand-dark);
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .panel-lead {
+      margin-top: 16px;
+      font-size: 1.04rem;
+    }
+
+    .panel-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 22px 0;
+    }
+
+    .panel-block {
+      padding: 20px;
+      border-radius: 20px;
+      background: var(--surface-strong);
+      border: 1px solid rgba(120, 34, 16, 0.08);
+    }
+
+    .panel-block h4 {
+      margin: 0 0 14px;
+      font-size: 0.96rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.48;
+    }
+
+    .bullet {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      display: inline-grid;
+      place-items: center;
+      margin-top: 1px;
+      border-radius: 50%;
+      font-size: 0.95rem;
+      font-weight: 900;
+    }
+
+    .bullet.ok {
+      background: rgba(184, 239, 111, 0.42);
+      color: #436400;
+    }
+
+    .bullet.no {
+      background: rgba(255, 110, 110, 0.18);
+      color: #ab1a1a;
+    }
+
+    .panel-benefit {
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255, 209, 106, 0.22), rgba(255, 255, 255, 0.5));
+      border: 1px solid rgba(227, 146, 23, 0.18);
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .footer-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(310px, 0.92fr);
+    }
+
+    .checklist {
+      padding: 26px;
+    }
+
+    .expert-tip {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--brand-dark);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .quick-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .quick-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(122, 30, 7, 0.08);
+    }
+
+    .quick-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .footer-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .app-footer {
+      margin-top: 26px;
+      padding: 0 8px;
+      text-align: center;
+      color: rgba(85, 39, 31, 0.8);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .intro-grid,
+      .care-grid,
+      .footer-grid,
+      .stats,
+      .panel-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        min-height: 400px;
+      }
+
+      h1 {
+        max-width: 11ch;
+      }
+    }
+
+    @media (max-width: 720px) {
+      body::before,
+      body::after {
+        display: none;
+      }
+
+      .page {
+        width: min(100vw - 18px, 100%);
+        padding: 10px 0 28px;
+      }
+
+      .hero,
+      .intro-card,
+      .mini-card,
+      .care-menu,
+      .care-panel,
+      .checklist,
+      .stat-card {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      .brand-row {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 16vw, 4rem);
+      }
+
+      .hero-art {
+        min-height: 320px;
+      }
+
+      .hero-bag-wrap {
+        width: 100%;
+        padding: 0;
+      }
+
+      .panel-block,
+      .quick-item {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="brand-row">
+        <div class="brand" aria-label="SoyRappi">
+          <span class="brand-mark">SoyRappi</span>
+        </div>
+        <div class="brand-tag">Guía rápida de cuidado</div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Nueva mochila para sumar más</div>
+          <h1>Ya tienes tu Mochila PRO 2026</h1>
+          <p class="hero-copy">
+            En tus manos tienes la nueva <strong>Mochila PRO 2026</strong>. Acabas de recibir una aliada pensada para que te la juegues con toda en SoyRappi y generes ganancias a montón. Más que una mochila, es tu compa ganadora para que cada kilómetro sume más, con pedidos mejor protegidos y espacio ideal para dobletes y tripletes.
+          </p>
+          <div class="mission-card">
+            <span class="mission-label">Misión del día</span>
+            <p>
+              Cuidar tus pedidos y subir de nivel. Lo mejor: es resistente, cómoda, expandible, impermeable y lista para acompañarte con seguridad en cualquier momento.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="hero-bag-wrap">
+            <img class="hero-bag-image" src="./mochila_ilustracion_base.png" alt="Ilustración de la Mochila PRO 2026 de Rappi">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <div class="hero-pill">Impermeable y resistente</div>
+        <div class="hero-pill">Compartimientos inteligentes</div>
+        <div class="hero-pill">Hecha para pedidos más seguros</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Capacidades clave de la mochila">
+      <article class="stat-card">
+        <p class="stat-label">Capacidad</p>
+        <p class="stat-value">75 L</p>
+        <p class="stat-copy">Espacio expandible para mover pedidos con estabilidad y sin perder comodidad.</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Peso máximo</p>
+        <p class="stat-value">10 kg</p>
+        <p class="stat-copy">Respeta el peso por pedido para cuidar la estructura, los cierres y tu espalda.</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Pedidos</p>
+        <p class="stat-value">3 max</p>
+        <p class="stat-copy">Ideal para dobletes y tripletes cuando distribuyes bien el peso en la base.</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Seguridad</p>
+        <p class="stat-value">Reflectiva</p>
+        <p class="stat-copy">El logo reflectivo te ayuda a verte desde lejos, de día o de noche.</p>
+      </article>
+    </section>
+
+    <section class="intro-grid">
+      <article class="intro-card">
+        <span class="section-tag">Engagement de bienvenida</span>
+        <h2>Tu mochila te ayuda a ganar en grande</h2>
+        <p class="section-copy">
+          Esta mochila fue diseñada para que cada pedido llegue mejor cuidado, mejor presentado y con más chance de convertir cada recorrido en una buena jornada. <span class="highlight-line">Si la cuidas bien, te acompaña más tiempo y responde mejor en cada ruta.</span>
+        </p>
+        <p class="section-copy">
+          La regla clave es simple: siempre habla de confianza. Una mochila cerrada, limpia, vertical y bien acomodada le dice al usuario que su pedido va en buenas manos.
+        </p>
+      </article>
+
+      <div class="mini-stack">
+        <article class="mini-card">
+          <h3>Lo mejorrr</h3>
+          <p>Es resistente, cómoda, expandible, impermeable y con espacio ideal para llevar tus pedidos con mayor seguridad.</p>
+          <div class="safety-chip">Mantén la mochila siempre vertical para proteger mejor los envases.</div>
+        </article>
+        <article class="mini-card">
+          <h3>Tu truco del experto</h3>
+          <p>Antes de arrancar, revisa siempre que todo esté bien acomodado, que los cierres vayan arriba y que el peso quede firme en la base.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="care-grid">
+      <article class="care-menu">
+        <div class="care-header">
+          <span class="section-tag">Reglas de juego</span>
+          <h2>Cuida tu mochila en una sola vista</h2>
+          <p>Oprime cada regla para ver qué hacer, qué evitar y por qué eso te conviene en ruta.</p>
+        </div>
+        <div class="care-buttons" id="careButtons"></div>
+      </article>
+
+      <article class="care-panel" id="carePanel" aria-live="polite"></article>
+    </section>
+
+    <section class="footer-grid">
+      <article class="checklist">
+        <span class="expert-tip">Chequeo express antes de arrancar</span>
+        <h3>Tu rutina pro en menos de un minuto</h3>
+        <div class="quick-list">
+          <div class="quick-item">
+            <span class="bullet ok">✓</span>
+            <div>
+              <strong>Cierres completos</strong>
+              Confirma que la mochila quede bien cerrada antes de salir.
+            </div>
+          </div>
+          <div class="quick-item">
+            <span class="bullet ok">✓</span>
+            <div>
+              <strong>Peso bien repartido</strong>
+              Pon lo más pesado en la base para que nada se mueva de más.
+            </div>
+          </div>
+          <div class="quick-item">
+            <span class="bullet ok">✓</span>
+            <div>
+              <strong>Pedidos firmes y separados</strong>
+              Fríos por un lado, calientes por otro, y todos con envases seguros.
+            </div>
+          </div>
+        </div>
+        <p class="footer-note">
+          Mientras mejor cuidas tu mochila, mejor cuidas tu operación, tu comodidad y la experiencia del usuario.
+        </p>
+      </article>
+
+      <article class="mini-card">
+        <h3>Recuerda siempre</h3>
+        <p>
+          No te sientes sobre la mochila, no la arrastres en el suelo y no la uses para cargar objetos personales pesados. Esta mochila está hecha para pedidos: cuidarla también es cuidar tus ganancias.
+        </p>
+      </article>
+    </section>
+
+    <p class="app-footer">Mochila PRO 2026 · Guía rápida de uso y cuidado para rappitenderos</p>
+  </main>
+
+  <script>
+    (function () {
+      var rules = [
+        {
+          id: "uso-correcto",
+          step: "01",
+          buttonTitle: "Uso correcto",
+          buttonText: "Ajusta, cierra y lleva tu mochila siempre vertical.",
+          title: "Usa tu mochila como pro",
+          lead: "La mejor experiencia empieza con una mochila bien puesta y bien cerrada. Así cuidas los pedidos y también tu comodidad durante la ruta.",
+          doList: [
+            "Ajusta bien los tirantes antes de salir.",
+            "Cierra completamente los cierres en cada trayecto.",
+            "Mantén la mochila siempre vertical.",
+            "Distribuye el peso en la base para que no se venza."
+          ],
+          avoidList: [
+            "Rodar con la mochila abierta o mal cerrada.",
+            "Dejar todo el peso en un solo lado.",
+            "Levantarla bruscamente cuando está cargada."
+          ],
+          benefit: "Esto mejora la estabilidad, protege los envases y evita desgaste innecesario en costuras y cierres."
+        },
+        {
+          id: "capacidad-maxima",
+          step: "02",
+          buttonTitle: "Capacidad máxima",
+          buttonText: "Aprovecha sus 75 litros sin pasarte del peso recomendado.",
+          title: "Carga bien para rendir mejor",
+          lead: "La mochila tiene gran capacidad, pero rendirá mucho mejor si respetas los límites pensados para su estructura y para tu seguridad.",
+          doList: [
+            "Usa sus 75 litros de forma ordenada y sin deformarla.",
+            "Respeta el máximo de 10 kg por pedido.",
+            "Lleva máximo 3 pedidos al mismo tiempo.",
+            "Pon lo más pesado abajo y lo más delicado arriba."
+          ],
+          avoidList: [
+            "Forzar la expansión con peso excesivo.",
+            "Sobrecargar la mochila con paquetes fuera de base.",
+            "Usarla para cargar objetos personales pesados."
+          ],
+          benefit: "Respetar la capacidad ayuda a que la mochila dure más y hace más cómodo cada recorrido."
+        },
+        {
+          id: "protege-pedidos",
+          step: "03",
+          buttonTitle: "Protege los pedidos",
+          buttonText: "Ordena fríos, calientes y envases para entregar con seguridad.",
+          title: "Pedidos mejor protegidos, usuarios más felices",
+          lead: "La mochila está pensada para cuidar la presentación del pedido. Si acomodas bien cada paquete, reduces derrames, golpes y reclamos.",
+          doList: [
+            "Mantén la mochila cerrada durante todo el trayecto.",
+            "Separa fríos y calientes en sus compartimientos.",
+            "Revisa que los envases queden firmes antes de arrancar.",
+            "Usa los espacios internos para que nada baile en ruta."
+          ],
+          avoidList: [
+            "Mezclar productos delicados con objetos pesados.",
+            "Llevar recipientes sueltos o mal cerrados.",
+            "Apilar pedidos sin revisar estabilidad."
+          ],
+          benefit: "Así entregas pedidos en mejor estado, cuidas la experiencia del usuario y proyectas más confianza."
+        },
+        {
+          id: "manten-limpia",
+          step: "04",
+          buttonTitle: "Mantén tu mochila limpia",
+          buttonText: "Límpiala, sécala y ventílala para que siempre se vea pro.",
+          title: "Una mochila limpia habla bien de ti",
+          lead: "La limpieza también es parte del servicio. Una mochila en buen estado transmite cuidado, orden y profesionalismo en cada entrega.",
+          doList: [
+            "Limpia la mochila con un paño húmedo cuando lo necesite.",
+            "Déjala secar antes de volver a usarla o guardarla.",
+            "Ventílala al terminar la jornada.",
+            "Limpia rápido cualquier derrame para evitar manchas y olores."
+          ],
+          avoidList: [
+            "Usar químicos abrasivos o cepillos duros.",
+            "Guardar la mochila mojada.",
+            "Dejar residuos o malos olores acumulados."
+          ],
+          benefit: "Mantenerla limpia prolonga su vida útil y hace que cada entrega se vea más confiable."
+        },
+        {
+          id: "evita-esto",
+          step: "05",
+          buttonTitle: "Evita esto",
+          buttonText: "Hay acciones simples que desgastan la mochila más rápido.",
+          title: "Lo que no haces también cuenta",
+          lead: "Mucho del desgaste prematuro viene de malos hábitos. Evitarlos hace una diferencia grande en la duración de tu mochila.",
+          doList: [
+            "Apóyala con cuidado cuando necesites descansar.",
+            "Súbela y bájala por las asas o con ambos tirantes.",
+            "Revísala seguido para detectar desgaste a tiempo."
+          ],
+          avoidList: [
+            "Sentarte sobre la mochila.",
+            "Arrastrarla por el suelo.",
+            "Golpearla contra bordes o cargarla como si fuera una caja cualquiera."
+          ],
+          benefit: "Con esto cuidas la base, la forma, las costuras y el look general de la mochila por mucho más tiempo."
+        },
+        {
+          id: "seguridad-ruta",
+          step: "06",
+          buttonTitle: "Seguridad en ruta",
+          buttonText: "Sácale provecho al logo reflectivo y a una mochila bien visible.",
+          title: "Hazte ver y rueda con más seguridad",
+          lead: "La mochila también es una herramienta de visibilidad. El logo reflectivo suma cuando ruedas de noche o en condiciones de baja luz.",
+          doList: [
+            "Mantén visible el logo reflectivo de la mochila.",
+            "Asegúrate de que la mochila quede firme en la espalda.",
+            "Verifica que nada tape las áreas reflectivas."
+          ],
+          avoidList: [
+            "Cubrir la mochila con elementos que bloqueen la visibilidad.",
+            "Circular con la mochila mal ajustada.",
+            "Ignorar puntos ciegos o maniobras bruscas con la carga suelta."
+          ],
+          benefit: "Más visibilidad y una mochila mejor ajustada te ayudan a moverte con mayor seguridad."
+        }
+      ];
+
+      var careButtons = document.getElementById("careButtons");
+      var carePanel = document.getElementById("carePanel");
+      var activeId = rules[0].id;
+
+      function renderButtons() {
+        careButtons.innerHTML = rules.map(function (rule) {
+          var activeClass = rule.id === activeId ? " is-active" : "";
+          return (
+            '<button class="care-button' + activeClass + '" type="button" data-rule="' + rule.id + '">' +
+              '<small>Paso ' + rule.step + '</small>' +
+              '<strong>' + rule.buttonTitle + '</strong>' +
+              '<span>' + rule.buttonText + '</span>' +
+            '</button>'
+          );
+        }).join("");
+      }
+
+      function renderList(items, type) {
+        return items.map(function (item) {
+          return (
+            '<li>' +
+              '<span class="bullet ' + type + '">' + (type === "ok" ? "✓" : "×") + '</span>' +
+              '<span>' + item + '</span>' +
+            '</li>'
+          );
+        }).join("");
+      }
+
+      function renderPanel(rule) {
+        carePanel.innerHTML =
+          '<span class="panel-step">Paso ' + rule.step + '</span>' +
+          '<h3>' + rule.title + '</h3>' +
+          '<p class="panel-lead">' + rule.lead + '</p>' +
+          '<div class="panel-columns">' +
+            '<section class="panel-block">' +
+              '<h4>Haz esto</h4>' +
+              '<ul class="list">' + renderList(rule.doList, "ok") + '</ul>' +
+            '</section>' +
+            '<section class="panel-block">' +
+              '<h4>Evita esto</h4>' +
+              '<ul class="list">' + renderList(rule.avoidList, "no") + '</ul>' +
+            '</section>' +
+          '</div>' +
+          '<div class="panel-benefit">' + rule.benefit + '</div>';
+      }
+
+      function setActiveRule(ruleId) {
+        var nextRule = rules.find(function (rule) {
+          return rule.id === ruleId;
+        });
+
+        if (!nextRule) {
+          return;
+        }
+
+        activeId = ruleId;
+        renderButtons();
+        renderPanel(nextRule);
+      }
+
+      careButtons.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-rule]");
+        if (!button) {
+          return;
+        }
+
+        setActiveRule(button.getAttribute("data-rule"));
+      });
+
+      renderButtons();
+      renderPanel(rules[0]);
+    })();
+  </script>
+</body>
+</html>
